@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinique Moustapha Seck</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #4A90E2;
+      --highlight-color: #FFD700;
+      --text-color: #222;
+      --background-color: #f0f8ff;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    header img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    header .welcome-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      text-transform: uppercase;
+      padding: 1rem 0;
+      border-left: 5px solid var(--highlight-color);
+      padding-left: 1rem;
+    }
+
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .service {
+      background-color: var(--highlight-color);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Section Bienvenue -->
+  <header>
+    <img src="https://res.cloudinary.com/dzcnlr1yz/image/upload/v1738086522/sbffrah79zohxrbjekyc.png" alt="Bienvenue à la Clinique">
+    <div class="welcome-text" data-aos="fade-up">
+      <h1>Bienvenue à la Clinique Moustapha Seck</h1>
+      <p>Votre santé, notre priorité.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Section Présentation -->
+    <section id="presentation" class="mt-4">
+      <h2 data-aos="fade-right">Présentation de la Clinique</h2>
+      <p data-aos="fade-left">
+        Située à Zac Mbao (Dakar), notre clinique offre une prise en charge médicale complète et personnalisée.
+      </p>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services">
+      <h2 data-aos="fade-right">Nos Services</h2>
+      <div class="service-container">
+        <div class="service" data-aos="zoom-in">
+          <h3>Gynécologie</h3>
+          <p>Des soins adaptés à chaque étape de la vie des femmes.</p>
+        </div>
+        <div class="service" data-aos="zoom-in">
+          <h3>Pédiatrie</h3>
+          <p>Des soins attentifs pour le bien-être des enfants.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clinique Moustapha Seck. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+      </html>
+    <!-- Formulaire de Rendez-vous -->
+    <section id="rendezvous" class="mt-5">
+      <h2 data-aos="fade-right">Prendre un Rendez-vous</h2>
+      <div class="form-container" data-aos="zoom-in">
+        <form action="https://formsubmit.co/hopital0000@gmail.com" method="POST">
+          <label for="nom">Nom complet :</label>
+          <input type="text" id="nom" name="nom" required>
+
+          <label for="email">Email (facultatif) :</label>
+          <input type="email" id="email" name="email">
+
+          <label for="telephone">Numéro de téléphone :</label>
+          <input type="tel" id="telephone" name="telephone" required>
+
+          <label for="service">Choisissez un service :</label>
+          <select id="service" name="service" required>
+            <option value="gynécologie">Gynécologie et Obstétrique</option>
+            <option value="pédiatrie">Pédiatrie</option>
+            <option value="urologie">Urologie</option>
+            <option value="echographie">Échographie</option>
+            <option value="maternité">Maternité Fonctionnelle</option>
+            <option value="bloc_opératoire">Bloc Opératoire</option>
+            <option value="consultations">Consultations Spécialisées</option>
+            <option value="hospitalisation">Hospitalisation</option>
+            <option value="urgences">Urgences</option>
+          </select>
+
+          <label for="message">Message ou questions :</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous">
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Clinique Moustapha Seck. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
