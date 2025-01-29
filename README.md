@@ -1,1 +1,1 @@
-# Cliniqueamy
+# Clinique Madjiguène Seck
